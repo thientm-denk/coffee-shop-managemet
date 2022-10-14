@@ -1,1 +1,1 @@
-# coffee-shop-managemet
+# Coffee Shop Managemet
