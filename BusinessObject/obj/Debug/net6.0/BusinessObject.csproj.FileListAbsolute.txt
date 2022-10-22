@@ -1,0 +1,14 @@
+D:\VSCode2022\project\CoffeeManagement\BusinessObject\bin\Debug\net6.0\BusinessObject.deps.json
+D:\VSCode2022\project\CoffeeManagement\BusinessObject\bin\Debug\net6.0\BusinessObject.dll
+D:\VSCode2022\project\CoffeeManagement\BusinessObject\bin\Debug\net6.0\BusinessObject.pdb
+D:\VSCode2022\project\CoffeeManagement\BusinessObject\obj\Debug\net6.0\BusinessObject.csproj.AssemblyReference.cache
+D:\VSCode2022\project\CoffeeManagement\BusinessObject\obj\Debug\net6.0\BusinessObject.GeneratedMSBuildEditorConfig.editorconfig
+D:\VSCode2022\project\CoffeeManagement\BusinessObject\obj\Debug\net6.0\BusinessObject.AssemblyInfoInputs.cache
+D:\VSCode2022\project\CoffeeManagement\BusinessObject\obj\Debug\net6.0\BusinessObject.AssemblyInfo.cs
+D:\VSCode2022\project\CoffeeManagement\BusinessObject\obj\Debug\net6.0\BusinessObject.csproj.CoreCompileInputs.cache
+D:\VSCode2022\project\CoffeeManagement\BusinessObject\obj\Debug\net6.0\BusinessObject.dll
+D:\VSCode2022\project\CoffeeManagement\BusinessObject\obj\Debug\net6.0\refint\BusinessObject.dll
+D:\VSCode2022\project\CoffeeManagement\BusinessObject\obj\Debug\net6.0\BusinessObject.pdb
+D:\VSCode2022\project\CoffeeManagement\BusinessObject\obj\Debug\net6.0\ref\BusinessObject.dll
+D:\VSCode2022\project\CoffeeManagement\BusinessObject\bin\Debug\net6.0\BusinessObject.runtimeconfig.json
+D:\VSCode2022\project\CoffeeManagement\BusinessObject\obj\Debug\net6.0\BusinessObject.genruntimeconfig.cache
