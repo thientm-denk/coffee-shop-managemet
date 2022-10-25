@@ -12,9 +12,9 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\ACER\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\ACER\\.nuget\\packages",
-      "D:\\VSCode2022\\Shared\\NuGetPackages"
+      "C:\\Users\\ADMIN\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\ADMIN\\.nuget\\packages",
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {
       "System.Reflection.NullabilityInfoContext.IsSupported": true,
