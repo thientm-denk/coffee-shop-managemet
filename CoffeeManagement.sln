@@ -5,15 +5,15 @@ VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessObject", "BusinessObject", "{BC7C19FE-F1A4-43E7-B853-511BB5384357}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessObject", "BusinessObject\BusinessObject.csproj", "{569EFA9A-8E41-4883-B007-198C628AD36F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessObject", "BusinessObject\BusinessObject.csproj", "{569EFA9A-8E41-4883-B007-198C628AD36F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{1F0D7E72-FE6C-40A2-BD5A-61C41875E2FC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CoffeeManagement", "CoffeeManagement", "{010564D8-FA4B-4BAE-B410-BCA8A2F048D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{4AC6DA1F-52FC-4452-B97D-2B4ABB5020AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{4AC6DA1F-52FC-4452-B97D-2B4ABB5020AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp1", "WinFormsApp1\WinFormsApp1.csproj", "{C0919E88-3EDC-43FB-83C8-B281B683D97B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsApp1", "WinFormsApp1\WinFormsApp1.csproj", "{C0919E88-3EDC-43FB-83C8-B281B683D97B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\VSCode2022\\project\\CoffeeManagement\\WinFormsApp1\\WinFormsApp1.csproj": {}
+    "D:\\VSCode2022\\project\\coffee-shop-managemet\\WinFormsApp1\\WinFormsApp1.csproj": {}
   },
   "projects": {
-    "D:\\VSCode2022\\project\\CoffeeManagement\\BusinessObject\\BusinessObject.csproj": {
+    "D:\\VSCode2022\\project\\coffee-shop-managemet\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VSCode2022\\project\\CoffeeManagement\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "D:\\VSCode2022\\project\\coffee-shop-managemet\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "D:\\VSCode2022\\project\\CoffeeManagement\\BusinessObject\\BusinessObject.csproj",
+        "projectPath": "D:\\VSCode2022\\project\\coffee-shop-managemet\\BusinessObject\\BusinessObject.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\VSCode2022\\project\\CoffeeManagement\\BusinessObject\\obj\\",
+        "outputPath": "D:\\VSCode2022\\project\\coffee-shop-managemet\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\VSCode2022\\Shared\\NuGetPackages"
@@ -54,6 +54,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.10, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             }
           },
           "imports": [
@@ -76,14 +84,14 @@
         }
       }
     },
-    "D:\\VSCode2022\\project\\CoffeeManagement\\DataAccess\\DataAccess.csproj": {
+    "D:\\VSCode2022\\project\\coffee-shop-managemet\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VSCode2022\\project\\CoffeeManagement\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "D:\\VSCode2022\\project\\coffee-shop-managemet\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "D:\\VSCode2022\\project\\CoffeeManagement\\DataAccess\\DataAccess.csproj",
+        "projectPath": "D:\\VSCode2022\\project\\coffee-shop-managemet\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\VSCode2022\\project\\CoffeeManagement\\DataAccess\\obj\\",
+        "outputPath": "D:\\VSCode2022\\project\\coffee-shop-managemet\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\VSCode2022\\Shared\\NuGetPackages"
@@ -104,7 +112,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\VSCode2022\\project\\coffee-shop-managemet\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "D:\\VSCode2022\\project\\coffee-shop-managemet\\BusinessObject\\BusinessObject.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -136,14 +148,14 @@
         }
       }
     },
-    "D:\\VSCode2022\\project\\CoffeeManagement\\WinFormsApp1\\WinFormsApp1.csproj": {
+    "D:\\VSCode2022\\project\\coffee-shop-managemet\\WinFormsApp1\\WinFormsApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VSCode2022\\project\\CoffeeManagement\\WinFormsApp1\\WinFormsApp1.csproj",
+        "projectUniqueName": "D:\\VSCode2022\\project\\coffee-shop-managemet\\WinFormsApp1\\WinFormsApp1.csproj",
         "projectName": "WinFormsApp1",
-        "projectPath": "D:\\VSCode2022\\project\\CoffeeManagement\\WinFormsApp1\\WinFormsApp1.csproj",
+        "projectPath": "D:\\VSCode2022\\project\\coffee-shop-managemet\\WinFormsApp1\\WinFormsApp1.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\VSCode2022\\project\\CoffeeManagement\\WinFormsApp1\\obj\\",
+        "outputPath": "D:\\VSCode2022\\project\\coffee-shop-managemet\\WinFormsApp1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\VSCode2022\\Shared\\NuGetPackages"
@@ -165,11 +177,11 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "D:\\VSCode2022\\project\\CoffeeManagement\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "D:\\VSCode2022\\project\\CoffeeManagement\\BusinessObject\\BusinessObject.csproj"
+              "D:\\VSCode2022\\project\\coffee-shop-managemet\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "D:\\VSCode2022\\project\\coffee-shop-managemet\\BusinessObject\\BusinessObject.csproj"
               },
-              "D:\\VSCode2022\\project\\CoffeeManagement\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "D:\\VSCode2022\\project\\CoffeeManagement\\DataAccess\\DataAccess.csproj"
+              "D:\\VSCode2022\\project\\coffee-shop-managemet\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "D:\\VSCode2022\\project\\coffee-shop-managemet\\DataAccess\\DataAccess.csproj"
               }
             }
           }

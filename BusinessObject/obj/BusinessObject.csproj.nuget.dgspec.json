@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\VSCode2022\\project\\CoffeeManagement\\BusinessObject\\BusinessObject.csproj": {}
+    "D:\\VSCode2022\\project\\coffee-shop-managemet\\BusinessObject\\BusinessObject.csproj": {}
   },
   "projects": {
-    "D:\\VSCode2022\\project\\CoffeeManagement\\BusinessObject\\BusinessObject.csproj": {
+    "D:\\VSCode2022\\project\\coffee-shop-managemet\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VSCode2022\\project\\CoffeeManagement\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "D:\\VSCode2022\\project\\coffee-shop-managemet\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "D:\\VSCode2022\\project\\CoffeeManagement\\BusinessObject\\BusinessObject.csproj",
+        "projectPath": "D:\\VSCode2022\\project\\coffee-shop-managemet\\BusinessObject\\BusinessObject.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\VSCode2022\\project\\CoffeeManagement\\BusinessObject\\obj\\",
+        "outputPath": "D:\\VSCode2022\\project\\coffee-shop-managemet\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\VSCode2022\\Shared\\NuGetPackages"
@@ -54,6 +54,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.10, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             }
           },
           "imports": [
