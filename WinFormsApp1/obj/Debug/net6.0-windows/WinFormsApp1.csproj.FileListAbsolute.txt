@@ -106,5 +106,8 @@ D:\VSCode2022\project\coffee-shop-managemet\WinFormsApp1\bin\Debug\net6.0-window
 D:\VSCode2022\project\coffee-shop-managemet\WinFormsApp1\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
 D:\VSCode2022\project\coffee-shop-managemet\WinFormsApp1\bin\Debug\net6.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
 D:\VSCode2022\project\coffee-shop-managemet\WinFormsApp1\bin\Debug\net6.0-windows\appsettings.json
-D:\VSCode2022\project\coffee-shop-managemet\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.frmDrink.resources
-D:\VSCode2022\project\coffee-shop-managemet\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.frmLogin.resources
+D:\VSCode2022\project\coffee-shop-managemet\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Employee.frmEmployeeClose.resources
+D:\VSCode2022\project\coffee-shop-managemet\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Employee.frmEmployeeOpen.resources
+D:\VSCode2022\project\coffee-shop-managemet\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Employee.frmNewOrder.resources
+D:\VSCode2022\project\coffee-shop-managemet\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.frmSelling.resources
+D:\VSCode2022\project\coffee-shop-managemet\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Form1.resources
