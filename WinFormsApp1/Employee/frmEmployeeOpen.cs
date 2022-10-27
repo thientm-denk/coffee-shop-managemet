@@ -1,7 +1,9 @@
-﻿using System;
+﻿using BusinessObject.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Metrics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,6 +15,7 @@ namespace WinFormsApp1.Employee
 {
     public partial class frmEmployeeOpen : Form
     {
+        public static User user { get; set; } = null;
         public frmEmployeeOpen()
         {
             InitializeComponent();

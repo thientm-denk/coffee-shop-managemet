@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\VSCode2022\\project\\coffee-shop-managemet\\WinFormsApp1\\WinFormsApp1.csproj": {}
+    "D:\\coffee-shop-managemet\\WinFormsApp1\\WinFormsApp1.csproj": {}
   },
   "projects": {
-    "D:\\VSCode2022\\project\\coffee-shop-managemet\\BusinessObject\\BusinessObject.csproj": {
+    "D:\\coffee-shop-managemet\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VSCode2022\\project\\coffee-shop-managemet\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "D:\\coffee-shop-managemet\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "D:\\VSCode2022\\project\\coffee-shop-managemet\\BusinessObject\\BusinessObject.csproj",
-        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\VSCode2022\\project\\coffee-shop-managemet\\BusinessObject\\obj\\",
+        "projectPath": "D:\\coffee-shop-managemet\\BusinessObject\\BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "D:\\coffee-shop-managemet\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\VSCode2022\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -76,24 +76,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\VSCode2022\\project\\coffee-shop-managemet\\DataAccess\\DataAccess.csproj": {
+    "D:\\coffee-shop-managemet\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VSCode2022\\project\\coffee-shop-managemet\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "D:\\coffee-shop-managemet\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "D:\\VSCode2022\\project\\coffee-shop-managemet\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\VSCode2022\\project\\coffee-shop-managemet\\DataAccess\\obj\\",
+        "projectPath": "D:\\coffee-shop-managemet\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "D:\\coffee-shop-managemet\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\VSCode2022\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -109,8 +109,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\VSCode2022\\project\\coffee-shop-managemet\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "D:\\VSCode2022\\project\\coffee-shop-managemet\\BusinessObject\\BusinessObject.csproj"
+              "D:\\coffee-shop-managemet\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "D:\\coffee-shop-managemet\\BusinessObject\\BusinessObject.csproj"
               }
             }
           }
@@ -124,6 +124,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.2.8, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -140,24 +146,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\VSCode2022\\project\\coffee-shop-managemet\\WinFormsApp1\\WinFormsApp1.csproj": {
+    "D:\\coffee-shop-managemet\\WinFormsApp1\\WinFormsApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VSCode2022\\project\\coffee-shop-managemet\\WinFormsApp1\\WinFormsApp1.csproj",
+        "projectUniqueName": "D:\\coffee-shop-managemet\\WinFormsApp1\\WinFormsApp1.csproj",
         "projectName": "WinFormsApp1",
-        "projectPath": "D:\\VSCode2022\\project\\coffee-shop-managemet\\WinFormsApp1\\WinFormsApp1.csproj",
-        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\VSCode2022\\project\\coffee-shop-managemet\\WinFormsApp1\\obj\\",
+        "projectPath": "D:\\coffee-shop-managemet\\WinFormsApp1\\WinFormsApp1.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "D:\\coffee-shop-managemet\\WinFormsApp1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\VSCode2022\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -173,11 +179,11 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "D:\\VSCode2022\\project\\coffee-shop-managemet\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "D:\\VSCode2022\\project\\coffee-shop-managemet\\BusinessObject\\BusinessObject.csproj"
+              "D:\\coffee-shop-managemet\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "D:\\coffee-shop-managemet\\BusinessObject\\BusinessObject.csproj"
               },
-              "D:\\VSCode2022\\project\\coffee-shop-managemet\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "D:\\VSCode2022\\project\\coffee-shop-managemet\\DataAccess\\DataAccess.csproj"
+              "D:\\coffee-shop-managemet\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "D:\\coffee-shop-managemet\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -210,7 +216,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

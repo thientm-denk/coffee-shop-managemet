@@ -31,8 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.UserName = new System.Windows.Forms.TextBox();
+            this.Password = new System.Windows.Forms.TextBox();
             this.LoginButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -54,7 +54,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 28);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Username:";
+            this.label2.Text = "UserName:";
             // 
             // label3
             // 
@@ -68,19 +68,19 @@
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(230, 105);
-            this.textBox1.Name = "Username";
-            this.textBox1.Size = new System.Drawing.Size(231, 34);
-            this.textBox1.TabIndex = 3;
+            this.UserName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.UserName.Location = new System.Drawing.Point(230, 105);
+            this.UserName.Name = "UserName";
+            this.UserName.Size = new System.Drawing.Size(231, 34);
+            this.UserName.TabIndex = 3;
             // 
             // textBox2
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(230, 160);
-            this.textBox2.Name = "Password";
-            this.textBox2.Size = new System.Drawing.Size(231, 34);
-            this.textBox2.TabIndex = 4;
+            this.Password.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Password.Location = new System.Drawing.Point(230, 160);
+            this.Password.Name = "Password";
+            this.Password.Size = new System.Drawing.Size(231, 34);
+            this.Password.TabIndex = 4;
             // 
             // LoginButton
             // 
@@ -91,6 +91,7 @@
             this.LoginButton.TabIndex = 5;
             this.LoginButton.Text = "Login";
             this.LoginButton.UseVisualStyleBackColor = true;
+            this.LoginButton.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // Login
             // 
@@ -98,8 +99,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(591, 275);
             this.Controls.Add(this.LoginButton);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.UserName);
+            this.Controls.Add(this.Password);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -115,8 +116,8 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox UserName;
+        private TextBox Password;
         private Button LoginButton;
     }
 }
