@@ -76,8 +76,18 @@ namespace DataAccess.DAO
         public User Login(string name, string password)
         {
             List<User> users = GetUsersList();
-            User user = users.SingleOrDefault(mb => mb.Name.Equals(name) && mb.Password.Equals(password));
-            return user;
+            foreach(User u in users)
+            {
+                if (u.Name != null && u.Password!= null)
+                {
+                    if (u.Name.ToLower().Equals(name.ToLower()) && u.Password.Equals(password))
+                    {
+                        return u;
+                    }
+                }
+            }
+            
+            return null;
         }
 
         public User GetUser(int userId)

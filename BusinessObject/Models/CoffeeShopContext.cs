@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.Extensions.Configuration;
 
 namespace BusinessObject.Models
 {
@@ -30,10 +29,11 @@ namespace BusinessObject.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetConnectionString("CoffeeShopDB"));
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseSqlServer("server =(local); database = CoffeeShop;uid=sa;pwd=12345;");
+            }
         }
 
-        }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Drink>(entity =>
@@ -58,7 +58,7 @@ namespace BusinessObject.Models
             modelBuilder.Entity<DrinkType>(entity =>
             {
                 entity.HasKey(e => e.TypeId)
-                    .HasName("PK__DrinkTyp__F04DF13A6C309232");
+                    .HasName("PK__DrinkTyp__F04DF13A8059F897");
 
                 entity.Property(e => e.TypeId).HasColumnName("typeId");
 
@@ -85,7 +85,7 @@ namespace BusinessObject.Models
             modelBuilder.Entity<OrderDetail>(entity =>
             {
                 entity.HasKey(e => e.OrderDetailsId)
-                    .HasName("PK__OrderDet__5EEE527370DE5C6A");
+                    .HasName("PK__OrderDet__5EEE52738F78F3A0");
 
                 entity.Property(e => e.OrderDetailsId).HasColumnName("orderDetailsId");
 
@@ -121,14 +121,13 @@ namespace BusinessObject.Models
 
                 entity.Property(e => e.ShiftName)
                     .HasMaxLength(30)
-                    .HasColumnName("shiftName")
-                    .IsFixedLength();
+                    .HasColumnName("shiftName");
             });
 
             modelBuilder.Entity<ShiftDetail>(entity =>
             {
                 entity.HasKey(e => e.ShiftDetailsId)
-                    .HasName("PK__ShiftDet__6C92379E8F4625AF");
+                    .HasName("PK__ShiftDet__6C92379E4B23648D");
 
                 entity.Property(e => e.ShiftDetailsId).HasColumnName("shiftDetailsId");
 
@@ -165,22 +164,18 @@ namespace BusinessObject.Models
 
                 entity.Property(e => e.Password)
                     .HasMaxLength(20)
-                    .HasColumnName("password")
-                    .IsFixedLength();
+                    .HasColumnName("password");
 
                 entity.Property(e => e.Role)
                     .HasMaxLength(10)
-                    .HasColumnName("role")
-                    .IsFixedLength();
+                    .HasColumnName("role");
             });
 
             modelBuilder.Entity<Voucher>(entity =>
             {
                 entity.Property(e => e.VoucherId).HasColumnName("voucherId");
 
-                entity.Property(e => e.Status)
-                    .HasMaxLength(20)
-                    .IsFixedLength();
+                entity.Property(e => e.Status).HasMaxLength(20);
             });
 
             OnModelCreatingPartial(modelBuilder);

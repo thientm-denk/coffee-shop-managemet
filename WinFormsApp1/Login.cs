@@ -30,29 +30,33 @@ namespace WinFormsApp1
         {
             string userName = UserName.Text;
             string password = Password.Text;
-            string jsonString = File.ReadAllText("appsettings.json");
-            User admin = JsonSerializer.Deserialize<User>(jsonString)!;
+            UserRepository userRepository = new UserRepository();
+            User admin = userRepository.Login(userName, password);
 
-            if (userName.Equals(admin.Name) && password.Equals(admin.Password))
-            {
-              
-            }
-
-            else if (((UserRepository)userRepository).Login(userName, password) != null)
-            {
-                this.Hide();
-                frmEmployeeOpen frmEmployeeOpen = new frmEmployeeOpen();
-
-                frmEmployeeOpen.user = ((UserRepository)userRepository).Login(userName, password);
-
-                frmEmployeeOpen.ShowDialog();
-
-                this.Close();
-            }
-            else
+            // dang nhap sai tra ve null
+            if (admin == null)
             {
                 MessageBox.Show("Wrong username or password!");
             }
+            // dung thi kiem tra xem phai admin ko
+            else if (admin.Role.Equals("MA"))
+            {
+                MessageBox.Show("Admin here");
+            }
+            else{ // khong dung thi chay cai nay (Canisher)
+
+                MessageBox.Show("User");
+
+                //this.Hide();
+                //frmEmployeeOpen frmEmployeeOpen = new frmEmployeeOpen();
+
+                //frmEmployeeOpen.user = ((UserRepository)userRepository).Login(userName, password);
+
+                //frmEmployeeOpen.ShowDialog();
+
+                //this.Close();
+            }
+            
         }
 
         private void btnLogin_KeyDown(object sender, KeyEventArgs e)
