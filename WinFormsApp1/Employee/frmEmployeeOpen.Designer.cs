@@ -43,7 +43,6 @@
             this.label1.Size = new System.Drawing.Size(315, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Money in Cashbox before working:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textMoney
             // 
@@ -61,6 +60,7 @@
             this.LogoutButton.TabIndex = 2;
             this.LogoutButton.Text = "Log out";
             this.LogoutButton.UseVisualStyleBackColor = true;
+            this.LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
             // 
             // StartButton
             // 
@@ -70,13 +70,14 @@
             this.StartButton.TabIndex = 2;
             this.StartButton.Text = "Start";
             this.StartButton.UseVisualStyleBackColor = true;
+            this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
             // 
             // frmEmployeeOpen
             // 
+            this.AcceptButton = this.StartButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(661, 159);
-            this.ControlBox = false;
             this.Controls.Add(this.StartButton);
             this.Controls.Add(this.LogoutButton);
             this.Controls.Add(this.textMoney);

@@ -52,7 +52,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(121, 105);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 28);
+            this.label2.Size = new System.Drawing.Size(107, 28);
             this.label2.TabIndex = 1;
             this.label2.Text = "UserName:";
             // 
@@ -66,15 +66,16 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Password:";
             // 
-            // textBox1
+            // UserName
             // 
+            this.UserName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.UserName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.UserName.Location = new System.Drawing.Point(230, 105);
             this.UserName.Name = "UserName";
             this.UserName.Size = new System.Drawing.Size(231, 34);
             this.UserName.TabIndex = 3;
             // 
-            // textBox2
+            // Password
             // 
             this.Password.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Password.Location = new System.Drawing.Point(230, 160);
@@ -95,6 +96,7 @@
             // 
             // Login
             // 
+            this.AcceptButton = this.LoginButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(591, 275);

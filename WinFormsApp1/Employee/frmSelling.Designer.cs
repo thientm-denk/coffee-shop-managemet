@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.txtTime = new System.Windows.Forms.Label();
+            this.txtDate = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.OrderButton = new System.Windows.Forms.Button();
             this.EndButton = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,9 +49,9 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(40, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 28);
+            this.label1.Size = new System.Drawing.Size(102, 28);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Name:";
+            this.label1.Text = "Employee:";
             // 
             // label2
             // 
@@ -73,56 +73,35 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Date:";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(40, 109);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 28);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Shift:";
-            // 
             // txtName
             // 
             this.txtName.AutoSize = true;
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtName.Location = new System.Drawing.Point(104, 25);
+            this.txtName.Location = new System.Drawing.Point(137, 25);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(65, 28);
+            this.txtName.Size = new System.Drawing.Size(60, 28);
             this.txtName.TabIndex = 2;
-            this.txtName.Text = "label5";
-            this.txtName.Click += new System.EventHandler(this.txtName_Click);
+            this.txtName.Text = "name";
             // 
-            // label5
+            // txtTime
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(90, 53);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 28);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "label5";
+            this.txtTime.AutoSize = true;
+            this.txtTime.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtTime.Location = new System.Drawing.Point(90, 53);
+            this.txtTime.Name = "txtTime";
+            this.txtTime.Size = new System.Drawing.Size(51, 28);
+            this.txtTime.TabIndex = 2;
+            this.txtTime.Text = "time";
             // 
-            // label6
+            // txtDate
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(90, 81);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 28);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "label5";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(90, 109);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 28);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "label5";
+            this.txtDate.AutoSize = true;
+            this.txtDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtDate.Location = new System.Drawing.Point(90, 81);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Size = new System.Drawing.Size(51, 28);
+            this.txtDate.TabIndex = 2;
+            this.txtDate.Text = "date";
             // 
             // dataGridView1
             // 
@@ -136,21 +115,23 @@
             // 
             // OrderButton
             // 
-            this.OrderButton.Location = new System.Drawing.Point(144, 156);
+            this.OrderButton.Location = new System.Drawing.Point(153, 156);
             this.OrderButton.Name = "OrderButton";
             this.OrderButton.Size = new System.Drawing.Size(146, 32);
             this.OrderButton.TabIndex = 4;
             this.OrderButton.Text = "New Order";
             this.OrderButton.UseVisualStyleBackColor = true;
+            this.OrderButton.Click += new System.EventHandler(this.OrderButton_Click);
             // 
             // EndButton
             // 
-            this.EndButton.Location = new System.Drawing.Point(586, 156);
+            this.EndButton.Location = new System.Drawing.Point(579, 156);
             this.EndButton.Name = "EndButton";
             this.EndButton.Size = new System.Drawing.Size(146, 32);
             this.EndButton.TabIndex = 4;
             this.EndButton.Text = "End shift";
             this.EndButton.UseVisualStyleBackColor = true;
+            this.EndButton.Click += new System.EventHandler(this.EndButton_Click);
             // 
             // label8
             // 
@@ -162,6 +143,11 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Orders:";
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frmSelling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -171,17 +157,16 @@
             this.Controls.Add(this.EndButton);
             this.Controls.Add(this.OrderButton);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtDate);
+            this.Controls.Add(this.txtTime);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmSelling";
             this.Text = "Coffee Cashier Management";
+            this.Load += new System.EventHandler(this.frmSelling_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -193,14 +178,13 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private Label label4;
         private Label txtName;
-        private Label label5;
-        private Label label6;
-        private Label label7;
+        private Label txtTime;
+        private Label txtDate;
         private DataGridView dataGridView1;
         private Button OrderButton;
         private Button EndButton;
         private Label label8;
+        private System.Windows.Forms.Timer timer1;
     }
 }

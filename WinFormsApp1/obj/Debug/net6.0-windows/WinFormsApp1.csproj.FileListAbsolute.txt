@@ -191,7 +191,6 @@ D:\coffee-shop-managemet\WinFormsApp1\obj\Debug\net6.0-windows\refint\WinFormsAp
 D:\coffee-shop-managemet\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.pdb
 D:\coffee-shop-managemet\WinFormsApp1\bin\Debug\net6.0-windows\appsettings.json
 D:\coffee-shop-managemet\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.exe
-D:\coffee-shop-managemet\WinFormsApp1\bin\Debug\net6.0-windows\Models\CoffeeShopContext.cs
 D:\coffee-shop-managemet\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.deps.json
 D:\coffee-shop-managemet\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.runtimeconfig.json
 D:\coffee-shop-managemet\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.dll

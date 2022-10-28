@@ -31,54 +31,28 @@ namespace WinFormsApp1
             string userName = UserName.Text;
             string password = Password.Text;
             UserRepository userRepository = new UserRepository();
-            User admin = userRepository.Login(userName, password);
+            User loginUser = userRepository.Login(userName, password);
 
             // dang nhap sai tra ve null
-            if (admin == null)
+            if (loginUser == null)
             {
                 MessageBox.Show("Wrong username or password!");
             }
             // dung thi kiem tra xem phai admin ko
-            else if (admin.Role.Equals("MA"))
+            else if (loginUser.Role.Equals("MA"))
             {
                 MessageBox.Show("Admin here");
             }
-            else{ // khong dung thi chay cai nay (Canisher)
-
-                MessageBox.Show("User");
-
-                //this.Hide();
-                //frmEmployeeOpen frmEmployeeOpen = new frmEmployeeOpen();
-
-                //frmEmployeeOpen.user = ((UserRepository)userRepository).Login(userName, password);
-
-                //frmEmployeeOpen.ShowDialog();
-
-                //this.Close();
-            }
-            
-        }
-
-        private void btnLogin_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
+            else
             {
-                LoginButton.PerformClick();
+                frmEmployeeOpen frmEmployeeOpen = new frmEmployeeOpen();
+
+                frmEmployeeOpen.loginUser = ((UserRepository)userRepository).Login(userName, password);
+
+                frmEmployeeOpen.ShowDialog();
+
+                this.Close();
             }
-        }
-
-
-
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-            this.AcceptButton = this.LoginButton;
-        }
-
-
-
-        private void lbLogin_Click(object sender, EventArgs e)
-        {
-
-        }
+            }
     }
 }
