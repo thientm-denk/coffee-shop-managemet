@@ -47,5 +47,10 @@ namespace WinFormsApp1
             frmNewOrder frmNewOrder = new frmNewOrder();    
             frmNewOrder.ShowDialog();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

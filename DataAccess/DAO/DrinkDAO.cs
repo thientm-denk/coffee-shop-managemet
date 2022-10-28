@@ -166,18 +166,32 @@ namespace DataAccess.DAO
 
         public List<Drink> SearchDrink(string name)
         {
-            List<Drink> searchResult = null;
+            List<Drink> searchResult = new List<Drink>();
+
+            List<Drink> drinks = null;
 
             try
             {
-                var context = new CoffeeShopContext();
-                searchResult = context.Drinks.Where(dr => dr.Name.ToLower().Contains(name.ToLower())).ToList();
+                CoffeeShopContext context = new CoffeeShopContext();
+                drinks = context.Drinks.ToList();
+
+                foreach(Drink drink in drinks)
+                {
+                    if (drink.Name.ToLower().Contains(name.ToLower()))
+                    {
+                        searchResult.Add(drink);
+                    }
+                }
+
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
+
             return searchResult;
+
+
         }
 
         public List<Drink> FilterDrinkByType(string name)

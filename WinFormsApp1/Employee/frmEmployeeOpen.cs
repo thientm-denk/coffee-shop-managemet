@@ -32,6 +32,8 @@ namespace WinFormsApp1.Employee
                 Int64 money = Int64.Parse(textMoney.Text);
                 if (money > 0)
                 {
+                    this.Hide();
+
                     frmSelling frmSelling = new frmSelling();
 
                     frmSelling.loginUser = loginUser;

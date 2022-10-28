@@ -9,10 +9,10 @@ namespace BusinessObject.Models
         public int OrderId { get; set; }
         public int DrinkId { get; set; }
         public int Quantity { get; set; }
-        public int? VocherId { get; set; }
+        public int VocherId { get; set; }
 
         public virtual Drink Drink { get; set; } = null!;
         public virtual Order Order { get; set; } = null!;
-        public virtual Voucher? Vocher { get; set; }
+        public virtual Voucher Vocher { get; set; }
     }
 }
