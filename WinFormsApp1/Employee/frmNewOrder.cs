@@ -140,7 +140,7 @@ namespace WinFormsApp1.Employee
                 if (order.Time >= new TimeSpan(6, 0, 0) && order.Time <= new TimeSpan(12, 0, 0))
                     order.ShiftId = 1;
                 else
-                    if (order.Time > new TimeSpan(12, 0, 0) && order.Time <= new TimeSpan(6, 0, 0))
+                    if (order.Time > new TimeSpan(12, 0, 0) && order.Time <= new TimeSpan(18, 0, 0))
                     order.ShiftId = 2;
                 else
                     order.ShiftId = 3;

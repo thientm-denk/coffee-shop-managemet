@@ -50,6 +50,16 @@ namespace WinFormsApp1
             frmEmployeeClose frmEmployeeClose = new frmEmployeeClose(this);
             frmEmployeeClose.moneyOut = money;
             frmEmployeeClose.moneyIn = moneyIn;
+            frmEmployeeClose.userId = loginUser.UserId;
+            string time = DateTime.Now.ToString("HH:mm:ss");
+            TimeSpan timespan = TimeSpan.Parse(time);
+            if (timespan >= new TimeSpan(6, 0, 0) && timespan <= new TimeSpan(12, 0, 0))
+                frmEmployeeClose.shiftId = 1;
+            else
+                if (timespan > new TimeSpan(12, 0, 0) && timespan <= new TimeSpan(18, 0, 0))
+                frmEmployeeClose.shiftId = 2;
+            else
+                frmEmployeeClose.shiftId = 3;
             frmEmployeeClose.ShowDialog();
         }
 

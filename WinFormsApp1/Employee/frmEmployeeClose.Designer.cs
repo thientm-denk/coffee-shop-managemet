@@ -60,7 +60,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(80, 126);
+            this.label3.Location = new System.Drawing.Point(74, 126);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(161, 28);
             this.label3.TabIndex = 0;
@@ -80,9 +80,9 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(80, 224);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(412, 19);
+            this.label4.Size = new System.Drawing.Size(413, 19);
             this.label4.TabIndex = 0;
-            this.label4.Text = "*If the money in cashbox is more than expected, in will be your tip";
+            this.label4.Text = "*If the money in cashbox is more than expected, it will be your tip!";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
