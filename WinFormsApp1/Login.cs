@@ -45,7 +45,7 @@ namespace WinFormsApp1
             }
             else
             {
-                frmEmployeeOpen frmEmployeeOpen = new frmEmployeeOpen();
+                frmEmployeeOpen frmEmployeeOpen = new frmEmployeeOpen(this);
 
                 frmEmployeeOpen.loginUser = ((UserRepository)userRepository).Login(userName, password);
 

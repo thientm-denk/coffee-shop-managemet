@@ -19,10 +19,12 @@ namespace WinFormsApp1.Employee
 {
     public partial class frmEmployeeOpen : Form
     {
+        Login form;
         public static User loginUser { get; set; } = null;
-        public frmEmployeeOpen()
+        public frmEmployeeOpen(Login login)
         {
             InitializeComponent();
+            form = login;
         }
         private void StartButton_Click(object sender, EventArgs e)
         {
@@ -30,13 +32,15 @@ namespace WinFormsApp1.Employee
             if (int.TryParse(textMoney.Text, out var value))
             {
                 Int64 money = Int64.Parse(textMoney.Text);
-                if (money > 0)
+                if (money >= 0)
                 {
                     this.Hide();
 
                     frmSelling frmSelling = new frmSelling();
 
                     frmSelling.loginUser = loginUser;
+
+                    frmSelling.moneyIn = money;
 
                     frmSelling.ShowDialog();
 
@@ -62,6 +66,8 @@ namespace WinFormsApp1.Employee
             Login.ShowDialog();
 
             this.Close();
+
+            form.Close();
         }
     }
 }

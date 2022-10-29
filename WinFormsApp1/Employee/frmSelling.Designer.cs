@@ -40,6 +40,9 @@
             this.EndButton = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,7 +119,7 @@
             // 
             // OrderButton
             // 
-            this.OrderButton.Location = new System.Drawing.Point(153, 156);
+            this.OrderButton.Location = new System.Drawing.Point(188, 144);
             this.OrderButton.Name = "OrderButton";
             this.OrderButton.Size = new System.Drawing.Size(146, 32);
             this.OrderButton.TabIndex = 4;
@@ -126,7 +129,7 @@
             // 
             // EndButton
             // 
-            this.EndButton.Location = new System.Drawing.Point(579, 156);
+            this.EndButton.Location = new System.Drawing.Point(516, 144);
             this.EndButton.Name = "EndButton";
             this.EndButton.Size = new System.Drawing.Size(146, 32);
             this.EndButton.TabIndex = 4;
@@ -140,14 +143,48 @@
             this.label8.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label8.Location = new System.Drawing.Point(40, 190);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(96, 35);
+            this.label8.Size = new System.Drawing.Size(152, 35);
             this.label8.TabIndex = 0;
-            this.label8.Text = "Orders:";
+            this.label8.Text = "Total orders:";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(216, 190);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(28, 35);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "0";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(473, 190);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(156, 35);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Total money:";
+            this.label5.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(724, 190);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(28, 35);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "0";
+            this.label6.Click += new System.EventHandler(this.label4_Click);
             // 
             // frmSelling
             // 
@@ -155,12 +192,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(887, 532);
             this.ControlBox = false;
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.EndButton);
             this.Controls.Add(this.OrderButton);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtDate);
             this.Controls.Add(this.txtTime);
             this.Controls.Add(this.txtName);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -187,5 +227,8 @@
         private Button EndButton;
         private Label label8;
         private System.Windows.Forms.Timer timer1;
+        private Label label4;
+        private Label label5;
+        private Label label6;
     }
 }

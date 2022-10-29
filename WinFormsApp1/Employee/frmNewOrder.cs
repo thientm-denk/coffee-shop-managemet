@@ -22,7 +22,7 @@ namespace WinFormsApp1.Employee
         DataTable dt = new DataTable();
         Int64 money;
         IDrinkRepository drinkRepository = new DrinkRepository();
-        frmSelling form;
+        frmSelling form { get; set; }
         IOrderDetailRepository drinkDetailRepository = new OrderDetailRepository();
         public frmNewOrder(frmSelling selling)
         {
@@ -135,7 +135,8 @@ namespace WinFormsApp1.Employee
             {
                 Order order = new Order();
                 order.Price = money;
-                order.Time = DateTime.Now.TimeOfDay;
+                string time = DateTime.Now.ToString("HH:mm:ss");
+                order.Time = TimeSpan.Parse(time);
                 if (order.Time >= new TimeSpan(6, 0, 0) && order.Time <= new TimeSpan(12, 0, 0))
                     order.ShiftId = 1;
                 else
@@ -157,9 +158,9 @@ namespace WinFormsApp1.Employee
                 DialogResult result = MessageBox.Show("done!");
                 if (result == DialogResult.OK)
                 {
-                    form.order = order;
-                    form.Show();
+                    frmSelling.order = order;
                     form.RefreshGrid();
+                    form.Refresh();
                     this.Close();
                 }
             }

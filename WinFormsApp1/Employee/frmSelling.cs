@@ -1,8 +1,12 @@
 ﻿using BusinessObject.Models;
+using DataAccess.Repository;
+using DataAccess.Repository.Imple;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,7 +19,11 @@ namespace WinFormsApp1
 {
     public partial class frmSelling : Form
     {
-        public Order order { get; set; } = null;
+        IOrderRepository orderRepository = new OrderRepository();
+        int count = 0;
+        public static long moneyIn { get; set; } = 0;
+        long money = 0;
+        public static Order order { get; set; } = null;
         List<Order> orders = new List<Order>();
         public static User loginUser { get; set; } = null;
         public frmSelling()
@@ -37,8 +45,9 @@ namespace WinFormsApp1
 
         private void EndButton_Click(object sender, EventArgs e)
         {
-            frmEmployeeClose frmEmployeeClose = new frmEmployeeClose();
-
+            frmEmployeeClose frmEmployeeClose = new frmEmployeeClose(this);
+            frmEmployeeClose.moneyOut = money;
+            frmEmployeeClose.moneyIn = moneyIn;
             frmEmployeeClose.ShowDialog();
         }
 
@@ -50,12 +59,31 @@ namespace WinFormsApp1
         public void RefreshGrid()
         {
             orders.Add(order);
-            dataGridView1.Enabled = true;
-            dataGridView1.DataSource = orders; //Works great
-            dataGridView1.Rows.Add(order);
+             //Works great
+            BindingSource binding = new BindingSource();
+            binding.DataSource = orders;
+            dataGridView1.DataSource = binding;
+            count++;
+            money = money + orders[orders.Count-1].Price;
+            label4.Text = count.ToString();
+            label6.Text = money.ToString();
+            dataGridView1.Columns.Remove("OrderId");
+            dataGridView1.Refresh();
+            
+            this.Refresh();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
         {
 
         }

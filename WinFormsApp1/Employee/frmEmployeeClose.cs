@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessObject.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,37 @@ namespace WinFormsApp1.Employee
 {
     public partial class frmEmployeeClose : Form
     {
-        public frmEmployeeClose()
+        frmSelling form;
+        public static long moneyOut { get; set; } = 0;
+        public static long moneyIn { get; set; } = 0;
+        public frmEmployeeClose(frmSelling selling)
         {
             InitializeComponent();
+            form = selling;
         }
 
         private void frmEmployeeClose_Load(object sender, EventArgs e)
         {
+            txtBefore.Text = moneyIn.ToString();
+            txtBefore.Enabled = false;
+            txtExpected.Text = (moneyOut+moneyIn).ToString();
+            txtExpected.Enabled = false;
+        }
 
+        private void txtBefore_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            form.Close();
         }
     }
 }

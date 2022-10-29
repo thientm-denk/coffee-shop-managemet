@@ -30,8 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.txtBefore = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtAfter = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtExpected = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -56,30 +54,13 @@
             this.txtBefore.Name = "txtBefore";
             this.txtBefore.Size = new System.Drawing.Size(282, 34);
             this.txtBefore.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(74, 112);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(167, 28);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Money after Shirf:";
-            // 
-            // txtAfter
-            // 
-            this.txtAfter.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtAfter.Location = new System.Drawing.Point(264, 109);
-            this.txtAfter.Name = "txtAfter";
-            this.txtAfter.Size = new System.Drawing.Size(282, 34);
-            this.txtAfter.TabIndex = 1;
+            this.txtBefore.TextChanged += new System.EventHandler(this.txtBefore_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(74, 164);
+            this.label3.Location = new System.Drawing.Point(80, 126);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(161, 28);
             this.label3.TabIndex = 0;
@@ -88,7 +69,7 @@
             // txtExpected
             // 
             this.txtExpected.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtExpected.Location = new System.Drawing.Point(264, 161);
+            this.txtExpected.Location = new System.Drawing.Point(264, 126);
             this.txtExpected.Name = "txtExpected";
             this.txtExpected.Size = new System.Drawing.Size(282, 34);
             this.txtExpected.TabIndex = 1;
@@ -99,9 +80,10 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(80, 224);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(490, 19);
+            this.label4.Size = new System.Drawing.Size(412, 19);
             this.label4.TabIndex = 0;
-            this.label4.Text = "*If the money in cashbox is more than expected, in will be added to your salary";
+            this.label4.Text = "*If the money in cashbox is more than expected, in will be your tip";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -121,6 +103,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Finish";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmEmployeeClose
             // 
@@ -132,8 +115,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtAfter);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtBefore);
             this.Controls.Add(this.label1);
             this.Name = "frmEmployeeClose";
@@ -148,8 +129,6 @@
 
         private Label label1;
         private TextBox txtBefore;
-        private Label label2;
-        private TextBox txtAfter;
         private Label label3;
         private TextBox txtExpected;
         private Label label4;
