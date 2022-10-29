@@ -35,6 +35,8 @@ namespace WinFormsApp1
         {
             txtName.Text = loginUser.Name;
             timer1.Start();
+            FormBorderStyle = FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -54,6 +56,9 @@ namespace WinFormsApp1
         private void OrderButton_Click(object sender, EventArgs e)
         {
             frmNewOrder frmNewOrder = new frmNewOrder(this);    
+            
+            frmNewOrder.StartPosition = FormStartPosition.Manual;
+            frmNewOrder.Location = new Point(860, 130);
             frmNewOrder.ShowDialog();
         }
         public void RefreshGrid()

@@ -36,6 +36,7 @@ namespace WinFormsApp1.Employee
                 {
                     this.Hide();
 
+
                     frmSelling frmSelling = new frmSelling();
 
                     frmSelling.loginUser = loginUser;
@@ -43,7 +44,7 @@ namespace WinFormsApp1.Employee
                     frmSelling.moneyIn = money;
 
                     frmSelling.ShowDialog();
-
+                   
                     this.Close();
                 }
                 else

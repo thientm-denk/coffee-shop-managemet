@@ -155,7 +155,7 @@ namespace WinFormsApp1.Employee
                     orderDetailRepository.AddOrderDetail(orderDetail);
                 }
 
-                DialogResult result = MessageBox.Show("done!");
+                DialogResult result = MessageBox.Show("Your bill has been generated!");
                 if (result == DialogResult.OK)
                 {
                     frmSelling.order = order;

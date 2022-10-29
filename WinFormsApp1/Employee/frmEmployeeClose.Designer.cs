@@ -45,7 +45,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(184, 28);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Money before Shirf:";
+            this.label1.Text = "Money before Shift:";
             // 
             // txtBefore
             // 
@@ -118,7 +118,7 @@
             this.Controls.Add(this.txtBefore);
             this.Controls.Add(this.label1);
             this.Name = "frmEmployeeClose";
-            this.Text = "v";
+            this.Text = "End shift";
             this.Load += new System.EventHandler(this.frmEmployeeClose_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
