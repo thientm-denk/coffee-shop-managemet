@@ -19,15 +19,15 @@ namespace WinFormsApp1.Employee
 
         IOrderRepository orderRepository = new OrderRepository();
 
-        OrderDetail orderDetail = new OrderDetail();
         DataTable dt = new DataTable();
         Int64 money;
         IDrinkRepository drinkRepository = new DrinkRepository();
-
+        frmSelling form;
         IOrderDetailRepository drinkDetailRepository = new OrderDetailRepository();
-        public frmNewOrder()
+        public frmNewOrder(frmSelling selling)
         {
             InitializeComponent();
+            form = selling;
         }
 
         private void frmNewOrder_Load(object sender, EventArgs e)
@@ -150,12 +150,25 @@ namespace WinFormsApp1.Employee
                     orderDetail.DrinkId = Int32.Parse(dt.Rows[i][0].ToString());
                     orderDetail.Quantity = Int32.Parse(dt.Rows[i][2].ToString());
                     orderDetail.VocherId = Int32.Parse(dt.Rows[i][4].ToString());
-                    orderDetail.VocherId = orderRepository.GetNextOrderId()-1;
+                    orderDetail.OrderId = orderRepository.GetNextOrderId()-1;
                     orderDetailRepository.AddOrderDetail(orderDetail);
                 }
-                MessageBox.Show("done!");
+
+                DialogResult result = MessageBox.Show("done!");
+                if (result == DialogResult.OK)
+                {
+                    form.order = order;
+                    form.Show();
+                    form.RefreshGrid();
+                    this.Close();
+                }
             }
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

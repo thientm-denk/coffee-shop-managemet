@@ -15,6 +15,8 @@ namespace WinFormsApp1
 {
     public partial class frmSelling : Form
     {
+        public Order order { get; set; } = null;
+        List<Order> orders = new List<Order>();
         public static User loginUser { get; set; } = null;
         public frmSelling()
         {
@@ -24,9 +26,7 @@ namespace WinFormsApp1
         private void frmSelling_Load(object sender, EventArgs e)
         {
             txtName.Text = loginUser.Name;
-            timer1.Start(); 
-            var orders=new List<Order>();
-
+            timer1.Start();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -44,8 +44,15 @@ namespace WinFormsApp1
 
         private void OrderButton_Click(object sender, EventArgs e)
         {
-            frmNewOrder frmNewOrder = new frmNewOrder();    
+            frmNewOrder frmNewOrder = new frmNewOrder(this);    
             frmNewOrder.ShowDialog();
+        }
+        public void RefreshGrid()
+        {
+            orders.Add(order);
+            dataGridView1.Enabled = true;
+            dataGridView1.DataSource = orders; //Works great
+            dataGridView1.Rows.Add(order);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

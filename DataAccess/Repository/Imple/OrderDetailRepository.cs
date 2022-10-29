@@ -33,5 +33,6 @@ namespace DataAccess.Repository.Imple
         {
             return OrderDetailDAO.Instance.GetOrderTotal(orderId);
         }
+
     }
 }
