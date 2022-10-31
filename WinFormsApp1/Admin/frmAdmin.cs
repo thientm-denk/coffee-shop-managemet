@@ -16,25 +16,51 @@ namespace WinFormsApp1.Admin
         {
             InitializeComponent();
         }
-
+        // orderd 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
 
         }
-
+        // nhan vien
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-
+            loadForm(new frmNhanVien());
         }
-
+        // nuoc uong
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-
+            loadForm(new frmProduct());
+        }
+        // doanh thu
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            loadForm(new frmDoanhThu());
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
+
+        #region Method
+        private void loadForm(Form form)
+        {
+            if (panel1.Controls.Count > 0)
+            {
+                panel1.Controls.RemoveAt(0);
+            }
+            Form frm = form as Form;
+            frm.TopLevel = false;
+            frm.Dock = DockStyle.Fill;
+            frm.BringToFront();
+            this.panel1.Controls.Add(frm);
+            this.panel1.Tag = frm;
+            frm.Show();
+
+
+        }
+        #endregion
+
+       
     }
 }

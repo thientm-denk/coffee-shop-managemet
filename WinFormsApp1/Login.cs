@@ -15,6 +15,7 @@ using System.Text.Json;
 using DataAccess.DAO;
 using BusinessObject.Models;
 using WinFormsApp1.Employee;
+using WinFormsApp1.Admin;
 
 namespace WinFormsApp1
 {
@@ -41,7 +42,10 @@ namespace WinFormsApp1
             // dung thi kiem tra xem phai admin ko
             else if (loginUser.Role.Equals("MA"))
             {
-                MessageBox.Show("Admin here");
+                frmAdmin frm = new frmAdmin();
+                this.Hide();
+                frm.ShowDialog();
+                this.Close();
             }
             else
             {
@@ -54,5 +58,10 @@ namespace WinFormsApp1
                 this.Close();
             }
             }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

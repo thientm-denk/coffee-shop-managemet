@@ -15,5 +15,8 @@ namespace DataAccess.Repository
         public void AddShift(Shift shift);
         public void Update(Shift shift);
         public void DeleteShift(int shiftId);
+
+        List<ShiftDetail> GetOrdersInDateRange(DateTime startDate, DateTime endDate);
+
     }
 }

@@ -151,6 +151,7 @@ namespace DataAccess.DAO
                 if (GetUser(user.UserId) == null && GetUser(user.Name) == null)
                 {
                     var context = new CoffeeShopContext();
+                    
                     context.Users.Add(user);
                     context.SaveChanges();
                 }
@@ -177,6 +178,7 @@ namespace DataAccess.DAO
                 if (u != null)
                 {
                     var context = new CoffeeShopContext();
+                    u = user;
                     context.Users.Update(u);
                     context.SaveChanges();
                 }

@@ -156,6 +156,7 @@ namespace BusinessObject.Models
                     .HasConstraintName("FK__ShiftDeta__userI__2D27B809");
             });
 
+
             modelBuilder.Entity<User>(entity =>
             {
                 entity.Property(e => e.UserId).HasColumnName("userId");

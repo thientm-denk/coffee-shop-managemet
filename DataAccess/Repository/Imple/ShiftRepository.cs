@@ -14,6 +14,9 @@ namespace DataAccess.Repository.Imple
 
         public void DeleteShift(int shiftId) => ShiftDAO.Instance.DeleteShift(shiftId);
 
+        public List<ShiftDetail> GetOrdersInDateRange(DateTime startDate, DateTime endDate) => ShiftDAO.Instance.GetOrdersInDateRange(startDate, endDate);
+
+
         public Shift GetShift(int shiftId)
         {
             return ShiftDAO.Instance.GetShift(shiftId);

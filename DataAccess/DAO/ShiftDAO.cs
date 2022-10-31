@@ -145,5 +145,13 @@ namespace DataAccess.DAO
             }
         }
 
+        public List<ShiftDetail> GetOrdersInDateRange(DateTime startDate, DateTime endDate)
+        {
+            using (CoffeeShopContext fStoreContext = new CoffeeShopContext())
+            {
+                return fStoreContext.ShiftDetails.Where(p => p.Date >= startDate && p.Date <= endDate)
+                    .OrderByDescending(p => p.Date).ToList();
+            }
+        }
     }
 }
