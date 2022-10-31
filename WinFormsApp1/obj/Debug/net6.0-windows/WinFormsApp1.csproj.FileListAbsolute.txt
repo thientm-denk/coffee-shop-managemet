@@ -366,3 +366,4 @@ E:\Study\2022_CN5\PRN221\ProjectGroup\2\coffee-shop-managemet\WinFormsApp1\obj\D
 E:\Study\2022_CN5\PRN221\ProjectGroup\2\coffee-shop-managemet\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.genruntimeconfig.cache
 E:\Study\2022_CN5\PRN221\ProjectGroup\2\coffee-shop-managemet\WinFormsApp1\obj\Debug\net6.0-windows\ref\WinFormsApp1.dll
 E:\Study\2022_CN5\PRN221\ProjectGroup\2\coffee-shop-managemet\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Admin.frmNhanVienChange.resources
+E:\Study\2022_CN5\PRN221\ProjectGroup\2\coffee-shop-managemet\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Admin.frmProductChange.resources

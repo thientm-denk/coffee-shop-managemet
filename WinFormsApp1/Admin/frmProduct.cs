@@ -17,7 +17,7 @@ namespace WinFormsApp1.Admin
     {
         BindingSource source;
         IDrinkRepository drinkRepository = new DrinkRepository();
-
+        IDrinkTypeRepository drinkTypeRepository = new DrinkTypeRepository();
         public frmProduct()
         {
             InitializeComponent();
@@ -25,22 +25,31 @@ namespace WinFormsApp1.Admin
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if(label1.Text != null)
+            if (DialogResult.Yes == MessageBox.Show("Do You Want Delete ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
             {
-                if (DialogResult.Yes == MessageBox.Show("Do You Want Delete ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
-                {
-                    drinkRepository.DeleteDrink(int.Parse(label1.Text));
-                }
-                
+                drinkRepository.DeleteDrink(int.Parse(textBox1.Text));
             }
-        }
+        
+        handleLoadClick();
+    }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            handleNewClick();
+        }
+        private void handleNewClick()
+        {
+            frmProductChange frm = new frmProductChange();
+            frm.isUpdate = false;
+            frm.ShowDialog();
+            handleLoadClick();
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+            handleLoadClick();
+        }
+        private void handleLoadClick()
         {
             var listDrinks = drinkRepository.GetDrinksList();
             // loc lai
@@ -65,7 +74,6 @@ namespace WinFormsApp1.Admin
                 MessageBox.Show(ex.Message, "Load report order list");
             }
         }
-
         private void frmProduct_Load(object sender, EventArgs e)
         {
             var listDrinks = drinkRepository.GetDrinksList();
@@ -87,7 +95,35 @@ namespace WinFormsApp1.Admin
             
         }
 
+        private void dgvOrderList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frmProductChange frm = new frmProductChange();
+            frm.drink = GetDrinkShowed();
+            frm.ShowDialog();
+            handleLoadClick();
+        }
+
         #region method
+        private Drink GetDrinkShowed()
+        {
+            Drink drink = null;
+            try
+            {
+                drink = new Drink
+                {
+                    DrinkId = int.Parse(textBox1.Text),
+                    Name = (textBox2.Text),
+                    Price = int.Parse(textBox3.Text),
+                    TypeId = int.Parse(textBox4.Text),
+                };
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Get order");
+            }
+            return drink;
+        }
         private void FillDataGridView(List<Drink> shift)
         {
             source = new BindingSource();

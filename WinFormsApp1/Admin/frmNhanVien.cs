@@ -103,6 +103,26 @@ namespace WinFormsApp1.Admin
 
 
         #region method
+        private User GetUserShowed()
+        {
+            User user = null;
+            try
+            {
+                user = new User
+                {
+                    UserId = int.Parse(textBox1.Text),
+                    Name = (textBox2.Text),
+                    Password = (textBox3.Text),
+                    Role = (textBox4.Text),
+                };
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Get order");
+            }
+            return user;
+        }
         private void FillDataGridView(List<User> shift)
         {
             source = new BindingSource();
@@ -164,25 +184,6 @@ namespace WinFormsApp1.Admin
         {
 
         }
-        private User GetUserShowed()
-        {
-            User user = null;
-            try
-            {
-                user = new User
-                {
-                    UserId = int.Parse(textBox1.Text),
-                    Name = (textBox2.Text),
-                    Password = (textBox3.Text),
-                    Role = (textBox4.Text),
-                };
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Get order");
-            }
-            return user;
-        }
+        
     }
 }

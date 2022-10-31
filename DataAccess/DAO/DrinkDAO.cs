@@ -128,6 +128,7 @@ namespace DataAccess.DAO
                 if (dr != null)
                 {
                     var context = new CoffeeShopContext();
+                    dr = drink;
                     context.Drinks.Update(dr);
                     context.SaveChanges();
                 }
