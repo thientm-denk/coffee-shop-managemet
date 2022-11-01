@@ -69,8 +69,9 @@
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(141, 26);
-            this.logOutToolStripMenuItem.Text = "LogOut";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
+            this.logOutToolStripMenuItem.Text = "Close app";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // toolStrip1
             // 
@@ -102,8 +103,8 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(81, 24);
-            this.toolStripButton1.Text = "DoanhThu";
+            this.toolStripButton1.Size = new System.Drawing.Size(71, 24);
+            this.toolStripButton1.Text = "Turnover";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripSeparator4
@@ -117,8 +118,8 @@
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(84, 24);
-            this.toolStripButton2.Text = "NuocUong";
+            this.toolStripButton2.Size = new System.Drawing.Size(54, 24);
+            this.toolStripButton2.Text = "Drinks";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripSeparator1
@@ -132,8 +133,8 @@
             this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(77, 24);
-            this.toolStripButton3.Text = "NhanVien";
+            this.toolStripButton3.Size = new System.Drawing.Size(85, 24);
+            this.toolStripButton3.Text = "Employees";
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolStripSeparator3
@@ -147,8 +148,8 @@
             this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(63, 24);
-            this.toolStripButton4.Text = "Odered";
+            this.toolStripButton4.Size = new System.Drawing.Size(58, 24);
+            this.toolStripButton4.Text = "Selling";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // toolStripSeparator2
@@ -175,6 +176,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmAdmin";
             this.Text = "frmAdmin";
+            this.Load += new System.EventHandler(this.frmAdmin_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);

@@ -19,7 +19,7 @@ namespace WinFormsApp1.Admin
         // orderd 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-
+            loadForm(new DrinkController());
         }
         // nhan vien
         private void toolStripButton3_Click(object sender, EventArgs e)
@@ -59,8 +59,17 @@ namespace WinFormsApp1.Admin
 
 
         }
+
         #endregion
 
-       
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmAdmin_Load(object sender, EventArgs e)
+        {
+            loadForm(new frmDoanhThu());
+        }
     }
 }

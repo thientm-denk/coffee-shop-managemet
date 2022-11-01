@@ -19,6 +19,7 @@ namespace WinFormsApp1.Admin
         // khai bao o day nha
         IShiftRepository shiftRepository = new ShiftRepository();
        
+        IShiftDetailRepository shiftDetailRepository = new ShiftDetailRepository(); 
         BindingSource source;
         BigInteger doanhThu;
 
@@ -87,7 +88,14 @@ namespace WinFormsApp1.Admin
             {              
                 comboBox2.Items.Add(shift[i].ShiftName);
             }
+            var shifts = shiftDetailRepository.GetShiftDetailList();
+            FillDataGridView(shifts);
+            for (int i = 0; i < shifts.Count; i++)
+            {
+                doanhThu += (shifts[i].CloseWallet - shifts[i].OpenWallet);
+            }
 
+            label3.Text = "Profit: " + doanhThu.ToString();
 
         }
 

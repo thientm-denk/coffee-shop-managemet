@@ -13,6 +13,8 @@ namespace BusinessObject.Models
         public int OrderId { get; set; }
         public int ShiftId { get; set; }
         public TimeSpan Time { get; set; }
+
+        public DateTime Date { get; set; }
         public long Price { get; set; }
 
         public virtual ShiftDetail Shift { get; set; } = null!;

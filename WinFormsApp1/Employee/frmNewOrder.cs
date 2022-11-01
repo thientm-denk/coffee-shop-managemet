@@ -144,6 +144,8 @@ namespace WinFormsApp1.Employee
                     order.ShiftId = 2;
                 else
                     order.ShiftId = 3;
+                time = DateTime.Now.ToString("MM/dd/yyyy");
+                order.Date = DateTime.Parse(time);
                 orderRepository.Add(order);
                 for(int i = 0; i < dt.Rows.Count; i++)
                 {
@@ -163,6 +165,10 @@ namespace WinFormsApp1.Employee
                     form.Refresh();
                     this.Close();
                 }
+            }
+            else
+            {
+                MessageBox.Show("Please input something!");
             }
 
         }

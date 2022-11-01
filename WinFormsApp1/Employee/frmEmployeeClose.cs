@@ -57,7 +57,7 @@ namespace WinFormsApp1.Employee
             shiftdetail.UserId = userId;
             shiftdetail.ShiftId = shiftId;
             shiftdetail.OpenWallet = moneyIn;
-            shiftdetail.CloseWallet = moneyOut;
+            shiftdetail.CloseWallet = moneyIn+moneyOut;
             shiftDetailRepository.AddShiftDetail(shiftdetail);
             form.Close();
             this.Close();
